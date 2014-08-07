@@ -18,7 +18,7 @@ test-server:
 test-cov: istanbul
 
 istanbul:
-	$(ISTANBUL) cover $(_MOCHA) -- -R spec test/spec/server
+	$(ISTANBUL) cover $(_MOCHA) -- -R spec test/spec/test
 
 coveralls:
 	cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js

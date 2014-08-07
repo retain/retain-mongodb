@@ -1,0 +1,12 @@
+# enabling nodejs
+language: node_js
+
+node:
+  - 0.10.x
+
+services:
+  - mongodb
+
+before_script: 'npm install'
+script: 'make test-cov'
+after_success: 'make coveralls'
